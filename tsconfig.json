@@ -2,22 +2,35 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      // add short paths
+      "@app/*": ["src/app/core/*", "src/app/layouts/*"],
+      "@data/*": ["src/app/data/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@modules/*": ["src/app/modules/*"],
+      "@env": ["src/environments/environment"]
+    },
     "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true, // add nova
+    "strict": true, // add nova
+    "noImplicitReturns": true, // add nova
+    "noFallthroughCasesInSwitch": true, // add nova
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "module": "esnext",
+    // "module": "esnext", // change nova
+    "module": "es2020", // add nova
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "lib": ["es2018", "dom"],
+    "allowSyntheticDefaultImports": true // add nova
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true, // add nova
+    "strictTemplates": true // add nova
   }
 }
