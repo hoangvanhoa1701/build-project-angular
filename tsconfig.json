@@ -28,7 +28,7 @@
     "allowSyntheticDefaultImports": true // add nova
   },
   "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
+    // "fullTemplateTypeCheck": true, // remove nova
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true, // add nova
     "strictTemplates": true // add nova
