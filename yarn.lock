@@ -1005,6 +1005,27 @@
     merge-source-map "^1.1.0"
     schema-utils "^2.6.4"
 
+"@ngneat/hot-toast@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@ngneat/hot-toast/-/hot-toast-2.0.1.tgz#1b3763a0bf63a8cd0f378d54238ba385524d8eb5"
+  integrity sha512-XTw9jP6jFEstxMKRjD2T79wcJgGu26MuH/vMWZbTV6tmfngCbgNc0Pxjy0b7ntN2eFgoeQdYapvjQlfvoohBgg==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngneat/overview@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@ngneat/overview/-/overview-1.0.0.tgz#554710ddf129aafd47d6e17ccca91e55736dd1d5"
+  integrity sha512-rWR1hwMMrHCwaLNkyRCkRUkh3gB3bN/5+EBfq5Y3I4e4OYvqNdGwF1X0x62iWE5Aof96dxKnyX4UdDnje49hiw==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngneat/reactive-forms@^1.7.2":
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@ngneat/reactive-forms/-/reactive-forms-1.7.2.tgz#f7a795d864741710e7d5684b74d704653e139fc1"
+  integrity sha512-+2SS87eBByGh1skxGujqR4m78k06CvZiH/cq9mLqMdEKJ+xqyCVIloIYjsMryfaPUlMPuf4+QHu2pVlcV/b0jQ==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngneat/until-destroy@^8.0.4":
   version "8.0.4"
   resolved "https://registry.yarnpkg.com/@ngneat/until-destroy/-/until-destroy-8.0.4.tgz#08c61fc791012d38fcb3310ec03de4f4df9f29d1"
