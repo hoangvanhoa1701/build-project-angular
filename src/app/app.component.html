@@ -1,6 +1,7 @@
 <app-screen-loader *ngIf="loading$ | async"></app-screen-loader>
 <ngx-loading-bar [includeSpinner]="false" [height]="'3px'" [color]="'#61a5fa'"></ngx-loading-bar>
 <ng-container *ngIf="layout$ | async as layout">
-  <app-main-layout *ngIf="layout === Layout.MAIN"></app-main-layout>
+  {{ layout + '----' }}
   <app-auth-layout *ngIf="layout === Layout.AUTH"></app-auth-layout>
+  <app-main-layout *ngIf="layout === Layout.MAIN"></app-main-layout>
 </ng-container>

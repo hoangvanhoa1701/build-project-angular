@@ -8,12 +8,13 @@ import {
   Router
 } from '@angular/router';
 import { LoadingBarService } from '@ngx-loading-bar/core';
-import { debounceTime, filter, map } from 'rxjs/operators';
+import { debounceTime, filter, map, take } from 'rxjs/operators';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { Layout } from '@app/layout.enum';
 import { Observable } from 'rxjs';
 import { LayoutService } from '@app/layout.service';
 import { getCurrentRouteConfig } from '@shared/utilities/routes/get-current-route-config';
+import { AuthService } from '@app/services/auth.service';
 
 @UntilDestroy()
 @Component({
@@ -26,11 +27,14 @@ export class AppComponent implements OnInit, AfterViewInit {
   loading$: Observable<boolean> = this.layoutService.loading$;
   layout$: Observable<Layout> = this.layoutService.layout$;
 
+  accessToken = '';
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private loadingBarService: LoadingBarService,
-    private layoutService: LayoutService
+    private layoutService: LayoutService,
+    private authService: AuthService
   ) {
     this.constructorLoadingBar();
   }
