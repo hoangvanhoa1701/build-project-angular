@@ -9,11 +9,17 @@ import { DataModule } from '@data/data.module';
 import { environment } from '@env';
 import { ScreenLoaderComponent } from './components/screen-loader/screen-loader.component';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 // Contains all modules
 const MODULES = [
   DataModule.forRoot({ url: environment.apiUrl, prefix: environment.prefix }),
-  HotToastModule.forRoot()
+  HotToastModule.forRoot(),
+  AngularFireModule.initializeApp(environment.firebase),
+  AngularFireDatabaseModule,
+  AngularFirestoreModule
 ];
 
 // Contains all components

@@ -7,6 +7,7 @@ import { FormBuilder, FormGroup } from '@ngneat/reactive-forms';
 import { catchError, debounceTime, switchMap, take } from 'rxjs/operators';
 import { Validators } from '@angular/forms';
 import { HotToastService } from '@ngneat/hot-toast';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 export interface Cred {
   phone: string;
@@ -23,12 +24,17 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup<Cred>;
   userSubmitLogin$ = new Subject<void>();
 
+  item$: Observable<any[]>;
+
   constructor(
     private authService: AuthService,
     private router: Router,
     private formBuilder: FormBuilder,
-    private toast: HotToastService
-  ) {}
+    private toast: HotToastService,
+    private firestore: AngularFirestore
+  ) {
+    this.item$ = firestore.collection('users').valueChanges();
+  }
 
   ngOnInit(): void {
     this.initForm();

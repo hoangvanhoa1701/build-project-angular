@@ -1,4 +1,9 @@
 <p>login works!</p>
+<ul>
+  <li *ngFor="let item of item$ | async">
+    {{ item.name }}
+  </li>
+</ul>
 <form (submit)="userSubmitLogin$.next()" [formGroup]="loginForm">
   <label>
     phone:
