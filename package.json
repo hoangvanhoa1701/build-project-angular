@@ -29,6 +29,7 @@
     "@types/lodash": "^4.14.168",
     "@types/lodash-es": "^4.17.4",
     "autoprefixer": "^10.2.5",
+    "date-fns": "^2.19.0",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "moment-timezone": "^0.5.33",

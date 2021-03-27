@@ -9,6 +9,8 @@ import { DataModule } from '@data/data.module';
 import { environment } from '@env';
 import { ScreenLoaderComponent } from './components/screen-loader/screen-loader.component';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { VnCurrencyPipe } from './pipes/vn-currency.pipe';
+import { DateFormatPipe } from './pipes/date-format.pipe';
 
 // Contains all modules
 const MODULES = [
@@ -20,7 +22,7 @@ const MODULES = [
 const COMPONENTS: any[] = [ScreenLoaderComponent];
 
 // Contains all pipes
-const PIPES: any[] = [];
+const PIPES: any[] = [DateFormatPipe, VnCurrencyPipe];
 
 // Contains all directives
 const DIRECTIVES: any[] = [];
