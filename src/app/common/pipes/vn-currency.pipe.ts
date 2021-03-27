@@ -4,7 +4,7 @@ import { CurrencyPipe } from '@angular/common';
 @Pipe({ name: 'vnCurrency' })
 export class VnCurrencyPipe extends CurrencyPipe implements PipeTransform {
   constructor() {
-    super();
+    super('vn', 'VND');
   }
   transform(
     value: any,
@@ -14,6 +14,7 @@ export class VnCurrencyPipe extends CurrencyPipe implements PipeTransform {
     locale?: string
   ): string | null {
     if (value) {
+      // @ts-ignore
       return super
         .transform(value, currencyCode || 'VND', display || '', digitsInfo, locale || 'en-US')
         .replace(/,/g, '.');
